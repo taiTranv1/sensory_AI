@@ -1,3 +1,3 @@
 venv310/
-__pycache__/
-*.pyc
+venv310/Scripts/
+venv310/Lib/ 
