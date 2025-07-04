@@ -4,12 +4,12 @@ import torch
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
 
 # --- CẤU HÌNH ---
-AUDIO_FILE = "hien_03.wav"
-OUTPUT_TEXT_FILE = "hien_03.txt"
+AUDIO_FILE = "data/HD_060425_trang_s1_A_M1.wav"
+OUTPUT_TEXT_FILE = "HD_060425_trang_s1_A_M1_PWs.txt"
 CHUNK_DURATION_SEC = 30
 
 # --- BACKEND AN TOÀN ---
-torchaudio.set_audio_backend("sox_io")  # Cần có ffmpeg/sox, hoặc dùng "soundfile"
+torchaudio.set_audio_backend("soundfil")  # Cần có ffmpeg/sox, hoặc dùng "soundfile"
 
 # --- B1: KIỂM TRA FILE ---
 if not os.path.exists(AUDIO_FILE):
@@ -17,7 +17,7 @@ if not os.path.exists(AUDIO_FILE):
 
 # --- B2: TẢI MÔ HÌNH ---
 print("📥 Đang tải mô hình PhoWhisper...")
-model = WhisperForConditionalGeneration.from_pretrained("vinai/PhoWhisper-small")
+model = WhisperForConditionalGeneration.from_pretrained("vinai/PhoWhisper-small") #small, medium, large
 processor = WhisperProcessor.from_pretrained("vinai/PhoWhisper-small")
 
 # --- B3: LOAD ÂM THANH ---
