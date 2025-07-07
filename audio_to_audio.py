@@ -14,4 +14,4 @@ def convert_to_wav(input_path, output_path):
     subprocess.run(command, check=True)
 
 # Ví dụ sử dụng:
-convert_to_wav("data/HD_060425_trang_s1_A_M1.m4a", "HD_060425_trang_s1_A_M1.wav")
+convert_to_wav("data_250707/HN-250707-Xuyen-S1-A-M3.m4a", "HN-250707-Xuyen-S1-A-M3.wav")

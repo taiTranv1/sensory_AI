@@ -15,7 +15,7 @@ def main(ground_truth_path, hypothesis_path):
     ground_truth = read_file(ground_truth_path)
     hypothesis = read_file(hypothesis_path)
 
-    # Chuẩn hóa
+    # Chuẩn hóa 
     ground_truth_norm = normalize(ground_truth)
     hypothesis_norm = normalize(hypothesis)
 
